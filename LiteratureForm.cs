@@ -23,11 +23,11 @@ namespace Crypto4
         //вибір функції шифрування чи розшифрування
         private void button1_Click(object sender, EventArgs e) 
         {
-            if (radioButton1.Checked && textBox1.TextLength != 0 && literatureCreate != null)
+            if (radioEncrypt.Checked && textBox1.TextLength != 0 && literatureCreate != null)
             {
                 textBox2.Text = literatureCreate.Encrypt(textBox1.Text);
             }
-            if (radioButton2.Checked && textBox2.TextLength != 0 && literatureCreate != null)
+            if (radioDecrypt.Checked && textBox2.TextLength != 0 && literatureCreate != null)
             {
                 textBox1.Text = literatureCreate.Decrypt(textBox2.Text);
             }
@@ -94,13 +94,13 @@ namespace Crypto4
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (radioEncrypt.Checked)
             textBox2.ResetText();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton2.Checked)
+            if(radioDecrypt.Checked)
             textBox1.ResetText();
         }
 
@@ -123,6 +123,5 @@ namespace Crypto4
         {
 
         }
-       
     }
 }
