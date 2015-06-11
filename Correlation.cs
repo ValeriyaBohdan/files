@@ -52,7 +52,6 @@ namespace DemoExcel
                             arr.Add(item.Value.ToString().Trim());
                         }
                       catch { arr.Add(""); }
-                  
                     }
 
                     dataGridViewMain.Rows.Add(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
@@ -80,10 +79,9 @@ namespace DemoExcel
                 for (int j = 0; j < 26; j++)
                     sersum[y] += Convert.ToDouble(dataGridViewMain[y, j].Value);
                 
-              
                 ser[y] = sersum[y] / 26;
                 ser[x] = ser[y];
-               
+    
             }
 
             //Корреляція           
@@ -116,8 +114,6 @@ namespace DemoExcel
             this.dataGridView1.Rows[2].HeaderCell.Value = "Доходи населення";
             this.dataGridView1.Rows[3].HeaderCell.Value = "Зайняте населення";
             this.dataGridView1.Rows[4].HeaderCell.Value = "Чисельність населення";
-
-
         }
 
         private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
