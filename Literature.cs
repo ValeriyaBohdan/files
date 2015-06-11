@@ -19,13 +19,13 @@ namespace Crypto4
             ReadFileKey(this.path);
         }
 
-        public Literature(string[] text) //зчитування літературного фрагменту для використання в якості ключа
+        public Literature(string[] text) //зчитування літературного фрагменту
         {
             ReadTextBoxKey(text);
         }
-
+    //створення псевдовипадкового ключа
         //Якщо ключ вибрано з файлу
-        private void ReadFileKey(string path) //нумеруємо всі стовпчики і рядки обраного ключа присвоюємо їм номера
+        private void ReadFileKey(string path) 
         {
             lines = System.IO.File.ReadAllLines(path);
             num = new string[lines.Length][];
